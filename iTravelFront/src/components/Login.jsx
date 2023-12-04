@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Login.css';
 
 const Login = () => {
@@ -24,23 +25,21 @@ const Login = () => {
   return (
     <div className='center-container'>
       <div className='login-container'>
-      <h2>Iniciar Sesión</h2>
+      <h2 className='login-title'>Panel Admin</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Nombre:</label>
-          <br />
+          <label htmlFor="name">Nombre</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={formData.username}
+            value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
         <div className='form-group'>
-          <label htmlFor="password">Contraseña:</label>
-          <br />
+          <label htmlFor="password">Contraseña</label>
           <input
             type="password"
             id="password"
@@ -52,7 +51,9 @@ const Login = () => {
         </div>
         <br />
         <div className='form-group'>
-          <button type="submit">Iniciar Sesión</button>
+          <Link to={"/empresas"}>
+            <button type="submit" className="login-button">Iniciar Sesión</button>
+          </Link>
         </div>
       </form>
     </div>
