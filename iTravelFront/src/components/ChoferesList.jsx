@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getAllChoferes } from '../api/Empresas.api';
-import '../css/EmpresasList.css';
+import '../styles/EmpresasList.css';
 
 export function ChoferesList() {
     const [choferes, setChoferes] = useState([]);

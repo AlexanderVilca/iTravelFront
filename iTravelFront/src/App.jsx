@@ -1,34 +1,50 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import EmpresasPages from "./pages/EmpresasPages";
-import UsuariosPages from './pages/UsuariosPages';
-import EmpresaFormpage from "./pages/EmpresaFormPages";
-import LoginPage from "./components/Login";
-import BusesPages from './pages/BusesPages';
-import BoletosPages from './pages/BoletosPages';
-import ChoferesPages from './pages/ChoferesPages';
-import ItinerariosPages from './pages/ItinerariosPages';
-import RutasPages from './pages/RutasPages';
+// App.jsx
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Sidebar} from './components/Sidebar';
+import { MyRoutes } from "./routers/routes";
+import { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+import { Light, Dark } from "./styles/Themes";
 
-function RedirectToEmpresas() {
-  return <Navigate to="/empresas" />;
-}
+export const ThemeContext = React.createContext(null)
 
 function App() {
+
+  const [theme, setTheme] = useState("light");
+  const themeStyle = theme === "light" ? Light : Dark;
+
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<LoginPage />} />
-        <Route path='/empresas' element={<EmpresasPages />} />
-        <Route path='/usuarios' element={<UsuariosPages />} />
-        <Route path='/buses' element={<BusesPages />} />
-        <Route path='/boletos' element={<BoletosPages />} />
-        <Route path='/create' element={<EmpresaFormpage />} />
-        <Route path='/choferes' element={<ChoferesPages />} />
-        <Route path='/itinerarios' element={<ItinerariosPages />} />
-        <Route path='/rutas' element={<RutasPages />} />
-      </Routes>
-    </BrowserRouter>
+
+    <>
+      <ThemeContext.Provider value={{ setTheme, theme }}>
+        <ThemeProvider theme={themeStyle}>
+          <BrowserRouter>
+            <Container className={sidebarOpen?"sidebarState active":"sidebarState"}>
+              <Sidebar 
+              sidebarOpen={sidebarOpen}
+              setSidebarOpen={setSidebarOpen}
+              />
+              <MyRoutes />
+            </Container>
+          </BrowserRouter>
+        </ThemeProvider>
+      </ThemeContext.Provider>
+    </>
   );
 }
 
+const Container = styled.div`
+display: grid;
+grid-template-columns: 90px auto;
+background: ${({ theme }) => theme.bgtotal};
+transition:all 0.3s ;
+&.active {
+  grid-template-columns: 300px auto;
+}
+color:${({theme})=>theme.text};
+`;
 export default App;

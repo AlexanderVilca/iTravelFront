@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'itravelweb',
         'USER': 'root',
-        'PASSWORD': '4l3x4nd3rv1lc4',
+        'PASSWORD': 'simeh2005',
         'HOST': 'localhost',
         'PORT': '3306',
     }
