@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllRutas } from '../api/Empresas.api';
-import '../css/EmpresasList.css';
+import '../styles/EmpresasList.css';
 
 export function RutasList() {
     const [rutas, setRutas] = useState([]);

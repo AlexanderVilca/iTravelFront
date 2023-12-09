@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllBuses } from '../api/Empresas.api';
-import '../css/EmpresasList.css';
+import '../styles/EmpresasList.css';
 
 export function BusesList() {
     const [buses, setBuses] = useState([]);

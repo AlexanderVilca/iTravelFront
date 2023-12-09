@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllEmpresas } from '../api/Empresas.api';
-import '../css/EmpresasList.css';
+import '../styles/EmpresasList.css';
 
 export function EmpresasList() {
     const [empresas, setEmpresas] = useState([]);

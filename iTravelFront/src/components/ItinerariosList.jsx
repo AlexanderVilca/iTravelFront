@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllItinerarios } from '../api/Empresas.api';
-import '../css/EmpresasList.css';
+import '../styles/EmpresasList.css';
 
 export function ItinerariosList() {
     const [itinerarios, setItinerarios] = useState([]);
