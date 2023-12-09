@@ -1,9 +1,9 @@
 import axios from 'axios'
 export const getAllEmpresas=()=>{
-    return axios.get('http://127.0.0.1:9090/empresas/')
+    return axios.get('http://127.0.0.1:8000/empresas/')
 }
 export const getAllUsuarios=()=>{
-    return axios.get('http://127.0.0.1:9090/usuarios/')
+    return axios.get('http://127.0.0.1:8000/usuarios/')
 }
 export const getAllBuses=()=>{
     return axios.get('http://127.0.0.1:8000/buses/')
