@@ -28,7 +28,7 @@ class Buses(models.Model):
     empresa = models.ForeignKey(EmpresasTransporte, on_delete=models.CASCADE, related_name='buses_empresa')
 
     def __str__(self):
-        return self.id
+        return self.placa
 
 class Boletos(models.Model):
     bus = models.ForeignKey(Buses, on_delete=models.CASCADE, related_name='boletos_bus')
@@ -38,7 +38,7 @@ class Boletos(models.Model):
     estado = models.IntegerField()
 
     def __str__(self):
-        return f"Boleto {self.id}"
+        return self.fechacompra
 
     
 class Choferes(models.Model):
@@ -47,7 +47,7 @@ class Choferes(models.Model):
     bus = models.ForeignKey(Buses, on_delete=models.CASCADE, related_name='choferes_bus')
 
     def __str__(self):
-        return f"Chofer {self.nombre}"
+        return self.nombre
 
     
 class Itinerarios(models.Model):
