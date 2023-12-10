@@ -20,7 +20,7 @@ export function EmpresasList() {
     }, []);
 
     return (
-        <div>
+        <div className="container sidebar-space">
             <h1>Lista de Empresas</h1>
             <table>
                 <thead>

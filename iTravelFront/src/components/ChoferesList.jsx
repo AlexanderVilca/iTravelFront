@@ -20,7 +20,7 @@ export function ChoferesList() {
     }, []);
 
     return (
-        <div>
+        <div className="container sidebar-space">
             <h1>Lista de Choferes</h1>
             <table>
                 <thead>

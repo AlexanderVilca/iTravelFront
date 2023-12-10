@@ -141,6 +141,11 @@ const linksArray = [
         icon: <MdOutlineAnalytics />,
         to: "/reportes",
     },
+    {
+      label: "Reportes",
+      icon: <MdOutlineAnalytics />,
+      to: "/reportes",
+    },
 
 ];
 const secondarylinksArray = [
@@ -152,7 +157,7 @@ const secondarylinksArray = [
     {
         label: "Salir",
         icon: <MdLogout />,
-        to: "/null",
+        to: "/",
     },
 ];
 //#endregion

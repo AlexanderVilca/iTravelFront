@@ -1,0 +1,36 @@
+/* EmpresasList.css */
+
+.container {
+    margin: 20px auto; /* Centra el contenido y añade espacio alrededor */
+    max-width: 800px; /* Establece un ancho máximo para el contenido */
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Añade espacio a la izquierda para alejar del sidebar */
+  .sidebar-space {
+    margin-left: 20px;
+  }
+  
+  /* Otros estilos según tus necesidades */
+  

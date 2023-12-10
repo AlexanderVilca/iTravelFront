@@ -20,7 +20,7 @@ export function RutasList() {
     }, []);
 
     return (
-        <div>
+        <div className="container sidebar-space">
             <h1>Lista de Rutas</h1>
             <table>
                 <thead>

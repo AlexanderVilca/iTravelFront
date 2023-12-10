@@ -19,7 +19,7 @@ export function UsuariosList() {
     }, []);
 
     return (
-        <div>
+        <div className="container sidebar-space">
             <h1>Lista de Usuarios</h1>
             <table>
                 <thead>

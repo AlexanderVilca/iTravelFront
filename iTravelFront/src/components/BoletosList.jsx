@@ -19,7 +19,7 @@ export function BoletosList() {
     }, []);
 
     return (
-        <div>
+        <div className="container sidebar-space">
             <h1>Lista de Boletos</h1>
             <table>
                 <thead>
