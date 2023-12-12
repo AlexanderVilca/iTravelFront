@@ -7,18 +7,30 @@ import ChoferesPages from '../pages/ChoferesPages';
 import ItinerariosPages from '../pages/ItinerariosPages';
 import RutasPages from '../pages/RutasPages';
 import Login from "../components/Login";
+import {UsuarioFormPage} from "../pages/UsuarioFormPage";
 
 export function MyRoutes() {
   return (
     <Routes>
     <Route path="/" element={<Login />} />
     <Route path='/empresas' element={<EmpresasPages />} />
+
+    {/*Usuarios */}
     <Route path='/usuarios' element={<UsuariosPages />} />
+    <Route path='/usuarios/create' element={<UsuarioFormPage />} />
+    <Route path='/usuarios/:id' element={<UsuarioFormPage />} />
+
+
+
+
+
+
     <Route path='/buses' element={<BusesPages />} />
     <Route path='/boletos' element={<BoletosPages />} />
     <Route path='/choferes' element={<ChoferesPages />} />
     <Route path='/itinerarios' element={<ItinerariosPages />} />
     <Route path='/rutas' element={<RutasPages />} />
+    
   </Routes>
   );
 }

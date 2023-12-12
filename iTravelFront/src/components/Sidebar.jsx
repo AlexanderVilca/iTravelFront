@@ -129,7 +129,7 @@ const linksArray = [
     {
         label: "Reportes",
         icon: <MdOutlineAnalytics />,
-        to: "/null",
+        to: "/usuarios/create",
     },
     {
         label: "Reportes",
