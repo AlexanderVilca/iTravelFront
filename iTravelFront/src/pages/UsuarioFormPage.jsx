@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { createUsuario,deleteUsuario, getUsuario, updateUsuario } from "../api/Empresas.api";
 import { useNavigate,useParams } from "react-router-dom";
 import { useEffect } from "react";
+import '../styles/UsuarioFormPage.css';
 
 export function UsuarioFormPage(){
     const {
@@ -42,7 +43,7 @@ export function UsuarioFormPage(){
         loadUser();
     },[])
     return(
-        <div>
+        <div className="containeruser">
             <form onSubmit={onSubmit}>
                 <input type="number" placeholder='uid' {...register("uid",{required:true})} />{errors.uid && <span>this field is required</span>}
                 <input type="number" placeholder='rol'{...register("rol",{required:true})}  />{errors.rol && <span>this field is required</span>}
@@ -52,7 +53,7 @@ export function UsuarioFormPage(){
                 <input type="number" placeholder='estado' {...register("estado",{required:true})} />{errors.estado && <span>this field is required</span>}
                 <button type="submit">Guardar</button>
             </form>
-            {params.id && (<button onClick={async ()=>{
+            {params.id && (<button className="delete-buttom" onClick={async ()=>{
                 const accepted = window.confirm("estas seguro")
                 if(accepted){
                    await deleteUsuario(params.id)

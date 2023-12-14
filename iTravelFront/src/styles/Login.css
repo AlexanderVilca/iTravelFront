@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
   }
   
   .login-container {
@@ -52,7 +52,7 @@
   }
   
   .login-button:hover {
-    background-color: #45a049;
+    background-color: #318fac;
   }
   
   

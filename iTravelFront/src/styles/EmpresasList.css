@@ -1,8 +1,6 @@
-/* EmpresasList.css */
-
 .container {
-    margin: 20px auto; /* Centra el contenido y añade espacio alrededor */
-    max-width: 800px; /* Establece un ancho máximo para el contenido */
+    margin: 20px auto;
+    max-width: 800px;
   }
   
   h1 {
@@ -24,13 +22,10 @@
   }
   
   th {
-    background-color: #f2f2f2;
+    background-color: #ecf0f1;
   }
   
-  /* Añade espacio a la izquierda para alejar del sidebar */
   .sidebar-space {
     margin-left: 20px;
   }
-  
-  /* Otros estilos según tus necesidades */
   

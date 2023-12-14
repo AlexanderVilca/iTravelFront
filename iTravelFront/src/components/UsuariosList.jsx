@@ -20,6 +20,11 @@ export function UsuariosList() {
         loadUsuarios();
     }, []);
 
+    const handleAgregarClick = () => {
+        // Redirige a la página de formulario para agregar un nuevo usuario
+        navigate('/usuarios/create');
+    };
+
     return (
         <div className="container sidebar-space">
             <h1>Lista de Usuarios</h1>
@@ -44,13 +49,15 @@ export function UsuariosList() {
                             <td>{usuario.rol}</td>
                             <td>{usuario.uid}</td>
                             <td>{usuario.estado}</td>
-                            <td onClick={()=>{
+                            <buttom className="" onClick={()=>{
                                 navigate('/usuarios/'+ usuario.id)
-                            }}>editar</td>
+                            }}>editar</buttom>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <br />
+            <button onClick={handleAgregarClick}>Agregar</button>
         </div>
     );
 }
