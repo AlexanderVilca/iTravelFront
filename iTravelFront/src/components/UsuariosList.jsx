@@ -21,7 +21,6 @@ export function UsuariosList() {
     }, []);
 
     const handleAgregarClick = () => {
-        // Redirige a la página de formulario para agregar un nuevo usuario
         navigate('/usuarios/create');
     };
 

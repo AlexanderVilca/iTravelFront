@@ -8,6 +8,8 @@ import ItinerariosPages from '../pages/ItinerariosPages';
 import RutasPages from '../pages/RutasPages';
 import Login from "../components/Login";
 import {UsuarioFormPage} from "../pages/UsuarioFormPage";
+import { EmpresaFormPage } from "../pages/EmpresaFormPage";
+import { ChoferFormPage } from "../pages/ChoferFormPage";
 
 export function MyRoutes() {
   return (
@@ -19,6 +21,10 @@ export function MyRoutes() {
     <Route path='/usuarios' element={<UsuariosPages />} />
     <Route path='/usuarios/create' element={<UsuarioFormPage />} />
     <Route path='/usuarios/:id' element={<UsuarioFormPage />} />
+    <Route path='/empresas/create' element={<EmpresaFormPage />} />
+    <Route path='/empresas/:id' element={<EmpresaFormPage />} />
+    <Route path='/choferes/create' element={<ChoferFormPage />} />
+    <Route path='/choferes/:id' element={<ChoferFormPage />} />
 
 
 
